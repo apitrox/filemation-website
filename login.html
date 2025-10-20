@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Filemation</title>
+    <meta name="description" content="Log in to your Filemation account">
+    <link rel="canonical" href="https://filemation.com/login.html">
+    <link rel="icon" type="image/png" href="./logos/filemation-icon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'filemation-blue': '#0066CC',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+<body class="font-['Inter',sans-serif] bg-light">
+    
+    <header id="main-header" class="header-sticky">
+        <nav class="navbar navbar-light bg-white shadow-sm">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="./logos/filemation.png" alt="Filemation" class="logo" style="height: 40px;">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <h1 class="h3 fw-bold text-filemation-blue">Filemation</h1>
+                                <p class="text-muted">06/14/2014 - Box API support added.</p>
+                            </div>
+                            
+                            <form id="login-form">
+                                <div class="form-outline mb-4">
+                                    <input type="email" id="email" class="form-control" placeholder=" " required />
+                                    <label class="form-label" for="email">Email</label>
+                                </div>
+                                
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="password" class="form-control" placeholder=" " required />
+                                    <label class="form-label" for="password">Password</label>
+                                </div>
+                                
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="remember" />
+                                    <label class="form-check-label" for="remember">
+                                        Remember me
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary w-100 mb-3">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Sign in
+                                </button>
+                                
+                                <div class="text-center">
+                                    <p class="text-muted">Don't have an account? <a href="./register.html" class="text-primary">Register</a></p>
+                                    <a href="#" class="text-muted small">Forgot password?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0 text-white-50">
+                        &copy; <span id="current-year">2025</span> Copyright Filemation.com. All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="./privacy-policy.html" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                    <a href="./terms-of-use.html" class="text-white-50 text-decoration-none">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login functionality is not yet implemented.');
+        });
+    </script>
+</body>
+</html>
