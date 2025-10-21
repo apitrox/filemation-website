@@ -65,7 +65,7 @@
   
   #hero .hero-container {
     @apply table-cell text-center align-middle m-0 px-2.5 py-0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(128, 128, 128, 0.6);
   }
   
   #hero h1 {
@@ -117,28 +117,33 @@
   
   #features .icon-box {
     @apply bg-white bg-cover;
-    padding: 0 0 13px 0;
+    padding: 0 0 10px 0;
+    margin-bottom: 10px;
   }
   
   #features .icon-box .icon {
-    @apply float-left bg-white rounded-full;
-    padding: 16px;
+    @apply float-left bg-white;
+    padding: 0;
+    border-radius: 0;
   }
   
   #features .icon-box .icon i {
-    @apply text-filemation-green text-2xl;
+    color: #59ab37;
+    font-size: 18px;
   }
   
   #features .icon-box .title {
-    margin-left: 80px;
-    font-weight: 500;
-    margin-bottom: 5px;
-    font-size: 18px;
-    padding-top: 20px;
+    margin-left: 30px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    font-size: 14px;
+    padding-top: 0;
+    line-height: 1.6;
   }
   
   #features .icon-box .title a {
-    @apply text-gray-900;
+    color: #333;
+    text-decoration: none;
   }
   
   /* Row and column utilities */
@@ -165,7 +170,10 @@
   
   /* Footer */
   #footer {
-    @apply bg-filemation-green-dark py-8 text-white text-sm;
+    background-color: #59ab37;
+    padding: 2rem 0;
+    color: white;
+    font-size: 0.875rem;
   }
   
   #footer .copyright {
