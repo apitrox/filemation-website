@@ -32,35 +32,27 @@
   
   /* Header styles */
   #header {
-    @apply bg-white py-8 h-[92px] fixed left-0 top-0 right-0 transition-all duration-500 z-[997];
+    @apply bg-white fixed left-0 top-0 right-0 transition-all duration-300 shadow-sm;
+    z-index: 50;
   }
   
-  #header.header-fixed {
-    @apply py-5 h-[72px];
+  #header.scrolled {
+    @apply shadow-md;
   }
   
-  #header #logo {
-    float: left;
-    margin-top: -18px;
+  #header .logo-container img {
+    @apply transition-all duration-300;
   }
   
-  #header #logo img {
-    @apply h-[70px] p-0;
+  /* Active navigation link */
+  .nav-link.active {
+    @apply text-filemation-green;
+    font-weight: 600;
   }
   
-  #header.header-fixed #logo img {
-    max-height: 54px;
-    margin-top: 4px;
-  }
-  
-  @media (max-width: 768px) {
-    #header #logo img {
-      max-height: 40px;
-    }
-  }
-  
-  .pull-left {
-    float: left;
+  /* Mobile menu show state */
+  #mobile-menu.show {
+    @apply block;
   }
   
   /* Hero section */
@@ -92,112 +84,6 @@
     #hero h2 {
       @apply text-lg leading-6 mb-8;
     }
-  }
-  
-  /* Navigation menu */
-  .nav-menu {
-    @apply m-0 p-0 list-none;
-  }
-  
-  .nav-menu > li {
-    @apply float-left relative whitespace-nowrap ml-2.5;
-  }
-  
-  .nav-menu a {
-    @apply px-2 pb-2.5 no-underline inline-block text-gray-800 font-heading font-normal uppercase text-[13px] outline-none relative;
-  }
-  
-  .nav-menu > li > a:before {
-    @apply absolute w-full h-0.5 bottom-0 left-0 bg-filemation-green-accent invisible transition-all duration-300 ease-in-out;
-    content: "";
-    transform: scaleX(0);
-  }
-  
-  .nav-menu a:hover:before, 
-  .nav-menu li:hover > a:before, 
-  .nav-menu .menu-active > a:before {
-    @apply visible;
-    transform: scaleX(1);
-  }
-  
-  /* Mobile navigation */
-  #mobile-nav-toggle {
-    @apply fixed right-0 top-0 z-[999] m-5 border-0 bg-transparent text-2xl hidden transition-all duration-400 outline-none cursor-pointer;
-  }
-  
-  #mobile-nav-toggle i {
-    @apply text-filemation-green-light;
-  }
-  
-  @media (max-width: 768px) {
-    #mobile-nav-toggle {
-      @apply inline-block;
-    }
-    
-    #nav-menu-container {
-      @apply hidden;
-    }
-  }
-  
-  #mobile-nav {
-    @apply fixed top-0 pt-[50px] pb-0 z-[998] overflow-y-auto transition-all duration-500;
-    left: -260px;
-    width: 260px;
-    padding-left: 0;
-    padding-right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-  }
-  
-  #mobile-nav ul {
-    @apply m-0 p-0 list-none;
-  }
-  
-  #mobile-nav ul li {
-    @apply relative;
-  }
-  
-  #mobile-nav ul li a {
-    @apply overflow-hidden text-ellipsis whitespace-nowrap py-2.5 pl-5 pr-12 text-white text-[13px] outline-none transition-all duration-300 block;
-  }
-  
-  #mobile-nav ul li a:hover,
-  #mobile-nav ul .menu-active > a {
-    @apply text-filemation-green-accent;
-  }
-  
-  #mobile-nav ul li i {
-    @apply absolute text-xl p-2.5 text-white cursor-pointer;
-    left: 210px;
-    top: 0;
-  }
-  
-  #mobile-nav ul li i.fa-chevron-up {
-    @apply text-filemation-green-accent;
-  }
-  
-  #mobile-nav ul ul {
-    @apply hidden;
-  }
-  
-  #mobile-nav ul .menu-item-active {
-    @apply block;
-  }
-  
-  #mobile-body-overly {
-    @apply w-full h-full z-[997] top-0 left-0 fixed bg-black/70 hidden;
-  }
-  
-  body.mobile-nav-active {
-    @apply overflow-hidden;
-  }
-  
-  body.mobile-nav-active #mobile-nav {
-    left: 0;
-  }
-  
-  body.mobile-nav-active #mobile-nav-toggle i {
-    @apply text-white;
   }
   
   /* Intro section */
