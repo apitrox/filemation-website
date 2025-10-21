@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Filemation - Pricing Plans</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="filemation pricing, document management plans" name="keywords">
+    <meta content="Filemation pricing plans for businesses of every size" name="description">
+
+    <!-- Favicons -->
+    <link href="images/favicon.png" rel="icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'filemation-green': '#59ab37',
+              'filemation-green-light': '#3eae49',
+              'filemation-green-dark': '#537c43',
+              'filemation-green-accent': '#2dc997',
+              'filemation-green-hover': '#51d8ad',
+              'filemation-blue': '#527493',
+              'filemation-gray': '#666666',
+            },
+            fontFamily: {
+              'sans': ['Open Sans', 'sans-serif'],
+              'heading': ['Poppins', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+      /* Pricing specific styles */
+      .pricing .plan_names {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+      
+      .pricing .plan_names > div {
+        flex: 1;
+        min-width: 200px;
+        padding: 20px;
+      }
+      
+      .pricing .col1 {
+        background: #f7f7f7;
+      }
+      
+      .pricing .col2, .pricing .col3, .pricing .col4 {
+        text-align: center;
+        background: white;
+        border: 1px solid #e0e0e0;
+      }
+      
+      .pricing .col3 {
+        background: #537c43;
+        color: white;
+        position: relative;
+      }
+      
+      .pricing .popular {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #3eae49;
+        color: white;
+        padding: 5px 40px;
+        transform: rotate(45deg) translate(30%, -50%);
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      
+      .pricing h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 20px 0;
+      }
+      
+      .pricing .price {
+        font-size: 18px;
+        margin: 20px 0;
+      }
+      
+      .pricing .price .sup {
+        font-size: 24px;
+        vertical-align: super;
+      }
+      
+      .pricing .price .amount {
+        font-size: 48px;
+        font-weight: bold;
+      }
+      
+      .pricing .seats {
+        margin: 15px 0;
+      }
+      
+      .pricing .seats .bold {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      
+      .pricing .plan_desc {
+        margin: 15px 0;
+        min-height: 40px;
+      }
+      
+      .pricing .button {
+        margin: 20px 0;
+      }
+      
+      .pricing .button a {
+        display: inline-block;
+        padding: 10px 30px;
+        text-decoration: none;
+        border-radius: 3px;
+        transition: all 0.3s;
+      }
+      
+      .pricing .button a.border.grey {
+        border: 2px solid #527493;
+        color: #527493;
+        background: white;
+      }
+      
+      .pricing .button a.border.grey:hover {
+        background: #527493;
+        color: white;
+      }
+      
+      .pricing .button a.solid {
+        background: white;
+        color: #537c43;
+        border: 2px solid white;
+      }
+      
+      .pricing .button a.solid:hover {
+        background: #f0f0f0;
+      }
+      
+      .pricing .time_toggle {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .pricing .time_toggle > div {
+        cursor: pointer;
+      }
+      
+      .pricing .time_toggle input {
+        margin-right: 8px;
+      }
+      
+      .pricing .starting {
+        font-size: 14px;
+        color: #666;
+      }
+      
+      .pricing .col3 .starting {
+        color: white;
+      }
+      
+      /* Feature list table */
+      .feat_list {
+        display: flex;
+        background: white;
+        border: 1px solid #e0e0e0;
+      }
+      
+      .feat_list > div {
+        flex: 1;
+        min-width: 200px;
+      }
+      
+      .feat_list .col1 > div {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e0e0e0;
+        font-weight: 500;
+      }
+      
+      .feat_list .col2 > div,
+      .feat_list .col3 > div,
+      .feat_list .col4 > div {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e0e0e0;
+        text-align: center;
+      }
+      
+      .feat_list .check {
+        position: relative;
+      }
+      
+      .feat_list .check::after {
+        content: "✓";
+        color: #3eae49;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      
+      .feat_list .col3 {
+        background: #f0f7f0;
+      }
+      
+      /* Mobile features accordion */
+      .mobile_feat {
+        display: none;
+        margin: 20px 0;
+      }
+      
+      .mobile_feat .bar1,
+      .mobile_feat .bar2,
+      .mobile_feat .bar3 {
+        background: #527493;
+        color: white;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+      
+      .mobile_feat .drop {
+        display: none;
+        background: #f7f7f7;
+      }
+      
+      .mobile_feat .drop.expanded {
+        display: block;
+      }
+      
+      .mobile_feat .drop .item {
+        padding: 10px 20px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      
+      @media (max-width: 768px) {
+        .pricing .plan_names > div {
+          flex: 1 1 100%;
+        }
+        
+        .feat_list {
+          display: none;
+        }
+        
+        .mobile_feat {
+          display: block;
+        }
+      }
+      
+      .clearBoth {
+        clear: both;
+      }
+      
+      /* FAQ Section */
+      .citrix-rg-38px {
+        font-size: 38px;
+        font-weight: 600;
+      }
+      
+      .citrix-rg-18px {
+        font-size: 18px;
+      }
+      
+      .citrix-rg-14px.faq {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      
+      .grey1 {
+        color: #333;
+      }
+    </style>
+</head>
+
+<body>
+
+<!--==========================
+Header
+============================-->
+<header id="header">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+            <div id="logo" class="float-left -mt-[18px]">
+                <a href="index.html"><img src="images/logo.png" alt="Filemation" title="Filemation" /></a>
+            </div>
+
+            <nav id="nav-menu-container" class="float-right">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="menu-active"><a href="pricing.html">Pricing</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+    </div>
+</header><!-- #header -->
+
+<!--==========================
+  Hero Section
+============================-->
+<section id="hero">
+    <div class="hero-container">
+        <h1>Filemation</h1>
+        <h2>Electronic Document Management</h2>
+    </div>
+</section><!-- #hero -->
+
+<main id="main">
+    <div style="text-align:center; margin-top:20px; padding-bottom:15px;">
+        <h1 class="text-4xl font-bold mb-4">PLANS & PRICING</h1>
+        <h1 class="text-2xl font-normal mb-2">Plans to help businesses of every size succeed.</h1>
+        <div class="text-base">Qualified nonprofit organization and public schools my be eligible for a free business account.</div>
+    </div>
+    
+    <div class="pricing section max-w-7xl mx-auto px-4">
+        <section id="pricing">
+            <div class="plan_names">
+                <div class="col1">
+                    <div class="time_toggle full">
+                        <div class="annual"><input name="time" checked="" type="radio"> Billed Annually</div>
+                        <div class="monthly"><input name="time" type="radio"> Billed Monthly</div>
+                    </div>
+                    <h2 class="text-xl font-semibold mb-3">The electronic document management solution.</h2>
+                    <span class="text-sm">Sign up in 60 seconds, no credit card required. Email&nbsp;<a href="mailto:info@filemation.com" class="text-filemation-green-light">info@filemation.com</a></span>
+                    <p class="mt-6 font-semibold">Filemation Features</p>
+                </div>
+                <div class="col2">
+                    <h3>Personal</h3>
+                    <div class="price">
+                        <span class="sup">$</span>
+                        <span class="amount m" style="display: none;">10</span>
+                        <span class="amount y" style="display: inline;">100</span>
+                        <span class="usermonth m" style="display: none;">/month</span>
+                        <span class="usermonth y" style="display: inline;">/year</span>
+                    </div>
+                    <div class="seats">
+                        <span class="bold">1</span> Team Member
+                        <p class="subtxt">&nbsp;</p>
+                    </div>
+                    <div class="plan_desc">
+                        Ideal for freelancers, contractors and startups.
+                    </div>
+                    <div class="button">
+                        <a href="/trial" class="border grey">
+                            Try Free
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile_feat">
+                    <div class="bar1 click">Personal Features</div>
+                    <div class="drop one expanded">
+                        <div class="item">Feature 1</div>
+                        <div class="item">Feature 2</div>
+                        <div class="item">Feature 3</div>
+                        <div class="item">Feature 4</div>
+                        <div class="item">Feature 5</div>
+                        <div class="item">Feature 6</div>
+                        <div class="item">Feature 7</div>
+                        <div class="item">Feature 8</div>
+                        <div class="item">Feature 9</div>
+                        <div class="item">Feature 10</div>
+                        <div class="item">Feature 11</div>
+                        <div class="item">Feature 12</div>
+                    </div>
+                </div>
+                <div class="col3">
+                    <span class="popular">most popular plan</span>
+                    <h3>Business</h3>
+                    <div class="price">
+                        <span class="sup">$</span>
+                        <span class="amount m" style="display: none;">50</span>
+                        <span class="amount y" style="display: inline;">500</span>
+                        <span class="usermonth m" style="display: none; color: #ffffff;">/month</span>
+                        <span class="usermonth y" style="display: inline; color: #ffffff;">/year</span>
+                    </div>
+                    <div class="seats">
+                        <span class="bold">3</span> Team Members
+                    </div>
+                    <div class="plan_desc" style="color: #ffffff;">
+                        For growing businesses.
+                    </div>
+                    <div class="button">
+                        <a href="/trial" class="solid">
+                            Try Free
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile_feat">
+                    <div class="bar1 click close">Personal Features</div>
+                    <div class="drop one">
+                        <div class="item">Feature 1</div>
+                        <div class="item">Feature 2</div>
+                        <div class="item">Feature 3</div>
+                        <div class="item">Feature 4</div>
+                        <div class="item">Feature 5</div>
+                        <div class="item">Feature 6</div>
+                        <div class="item">Feature 7</div>
+                        <div class="item">Feature 8</div>
+                        <div class="item">Feature 9</div>
+                        <div class="item">Feature 10</div>
+                        <div class="item">Feature 11</div>
+                        <div class="item">Feature 12</div>
+                    </div>
+                    <div class="bar2 click">Business Features</div>
+                    <div class="drop two expanded">
+                        <div class="item">Feature 13</div>
+                        <div class="item">Feature 14</div>
+                        <div class="item">Feature 15</div>
+                        <div class="item">Feature 16</div>
+                        <div class="item">Feature 17</div>
+                        <div class="item">Feature 18</div>
+                    </div>
+                </div>
+                <div class="col4">
+                    <h3>Enterprise</h3>
+                    <span class="starting">Starting at</span>
+                    <div class="price">
+                        <span class="sup">$</span>
+                        <span class="amount m" style="display: none;">100</span>
+                        <span class="amount y" style="display: inline;">1000</span>
+                        <span class="usermonth m" style="display: none;">/month</span>
+                        <span class="usermonth y" style="display: inline;">/year</span>
+                    </div>
+                    <div class="seats">
+                        <span class="bold">Email&nbsp;<a href="mailto:info@filemation.com" class="text-filemation-green-light">info@filemation.com</a></span>
+                        <p class="subtxt">&nbsp;</p>
+                    </div>
+                    <div class="plan_desc">
+                        For complex workflows and custom requirements.
+                    </div>
+                    <div class="button">
+                        <a href="contact.html" class="border grey">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile_feat">
+                    <div class="bar1 click close">Personal Features</div>
+                    <div class="drop one">
+                        <div class="item">Feature 1</div>
+                        <div class="item">Feature 2</div>
+                        <div class="item">Feature 3</div>
+                        <div class="item">Feature 4</div>
+                        <div class="item">Feature 5</div>
+                        <div class="item">Feature 6</div>
+                        <div class="item">Feature 7</div>
+                        <div class="item">Feature 8</div>
+                        <div class="item">Feature 9</div>
+                        <div class="item">Feature 10</div>
+                        <div class="item">Feature 11</div>
+                        <div class="item">Feature 12</div>
+                    </div>
+                    <div class="bar2 click close">Business Features</div>
+                    <div class="drop two">
+                        <div class="item">Feature 13</div>
+                        <div class="item">Feature 14</div>
+                        <div class="item">Feature 15</div>
+                        <div class="item">Feature 16</div>
+                        <div class="item">Feature 17</div>
+                        <div class="item">Feature 18</div>
+                    </div>
+                    <div class="bar3 click">Business Plus Features</div>
+                    <div class="drop three expanded">
+                        <div class="item">Feature 19</div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearBoth"></div>
+            <div class="feat_list">
+                <div class="col1">
+                    <div><p>Feature 1</p></div>
+                    <div><p>Feature 2</p></div>
+                    <div><p>Feature 3</p></div>
+                    <div><p>Feature 4</p></div>
+                    <div><p>Feature 5</p></div>
+                    <div><p>Feature 6</p></div>
+                    <div><p>Feature 7</p></div>
+                    <div><p>Feature 8</p></div>
+                    <div><p>Feature 9</p></div>
+                    <div><p>Feature 10</p></div>
+                    <div><p>Feature 11</p></div>
+                    <div><p>Feature 12</p></div>
+                    <div><p>Feature 13</p></div>
+                    <div><p>Feature 14</p></div>
+                    <div><p>Feature 15</p></div>
+                    <div><p>Feature 16</p></div>
+                    <div><p>Feature 17</p></div>
+                    <div><p>Feature 18</p></div>
+                    <div><p>Feature 19</p></div>
+                    <div><p>Get Started Today</p></div>
+                </div>
+                <div class="col2">
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div class="button">
+                        <a href="/trial" class="border grey">
+                            Try Free
+                        </a>
+                    </div>
+                </div>
+                <div class="col3">
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="button">
+                        <a href="/trial" class="solid">
+                            Try Free
+                        </a>
+                    </div>
+                </div>
+                <div class="col4">
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="button">
+                        <a href="contact.html" class="border grey">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="clearBoth"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="col-control section py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p><span class="citrix-rg-38px grey1">Frequently Asked Questions</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-control section pb-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <p><span class="citrix-rg-18px grey1"><b>Question 1..?</b></span></p>
+                    <p><span class="citrix-rg-14px faq grey1">The answer for question 1...</span></p>
+                </div>
+                <div>
+                    <p><span class="citrix-rg-18px grey1"><b>Question 2..?</b></span></p>
+                    <p><span class="citrix-rg-14px faq grey1">The answer for question 2...</span></p>
+                </div>
+                <div>
+                    <p><span class="citrix-rg-18px grey1"><b>Question 3..?</b></span></p>
+                    <p><span class="citrix-rg-14px faq grey1">The answer for question 3...</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-control section pb-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <p><span class="citrix-rg-18px grey1"><b>Question 4..?</b></span></p>
+                    <p><span class="citrix-rg-14px faq grey1">The answer for question 4...</span></p>
+                </div>
+                <div>
+                    <p><span class="citrix-rg-18px grey1"><b>Question 5..?</b></span></p>
+                    <p><span class="citrix-rg-14px faq grey1">The answer for question 5...</span></p>
+                </div>
+                <div>
+                    <p><span class="citrix-rg-18px grey1"><b>Question 6..?</b></span></p>
+                    <p><span class="citrix-rg-14px faq grey1">The answer for question 6...</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--==========================
+  Footer
+============================-->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container mx-auto px-4">
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4">
+        <div class="copyright">
+            &copy; Copyright <strong>Filemation.com</strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+        </div>
+    </div>
+</footer><!-- #footer -->
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Template Main Javascript File -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

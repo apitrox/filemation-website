@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Filemation - Log In</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="filemation login" name="keywords">
+    <meta content="Log in to your Filemation account" name="description">
+
+    <!-- Favicons -->
+    <link href="images/favicon.png" rel="icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'filemation-green': '#59ab37',
+              'filemation-green-light': '#3eae49',
+              'filemation-green-dark': '#537c43',
+              'filemation-green-accent': '#2dc997',
+              'filemation-green-hover': '#51d8ad',
+              'filemation-blue': '#527493',
+              'filemation-gray': '#666666',
+            },
+            fontFamily: {
+              'sans': ['Open Sans', 'sans-serif'],
+              'heading': ['Poppins', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--==========================
+Header
+============================-->
+<header id="header">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+            <div id="logo" class="float-left -mt-[18px]">
+                <a href="index.html"><img src="images/logo.png" alt="Filemation" title="Filemation" /></a>
+            </div>
+
+            <nav id="nav-menu-container" class="float-right">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li class="menu-active"><a href="login.html">Log In</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+    </div>
+</header><!-- #header -->
+
+<!--==========================
+  Hero Section
+============================-->
+<section id="hero">
+    <div class="hero-container">
+        <h1>Filemation</h1>
+        <h2>Electronic Document Management</h2>
+    </div>
+</section><!-- #hero -->
+
+<main id="main">
+    <section id="contact" class="section-data py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-md mx-auto">
+                <h1 class="text-4xl font-bold text-center mb-8">Log In</h1>
+                
+                <div id="Message_Container" style="display: none;">
+                    <div id="Message_Success_Wrapper" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4" style="display: none;">
+                        Thank you for your interest in the Data Intake demo.<br/>
+                        You should have received a text msg with the link to access the demo data intake questionaire.
+                        If you have not please wait or try again.
+                    </div>
+                    <div id="Message_Error_Wrapper" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4" style="display: none;">
+                        The username you provided is not recognized.
+                    </div>
+                </div>
+                
+                <div id="Form_Wrapper" class="form">
+                    <form id="Send_Form" action="" method="post" role="form" class="contactForm">
+                        <div class="form-group mb-4">
+                            <input type="text" id="User_Name" name="User_Name" class="form-control w-full border border-gray-300 py-2 px-3 rounded focus:outline-none focus:border-filemation-green-accent focus:ring-1 focus:ring-filemation-green-accent" placeholder="User Name" required />
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="password" id="Password" name="Password" class="form-control w-full border border-gray-300 py-2 px-3 rounded focus:outline-none focus:border-filemation-green-accent focus:ring-1 focus:ring-filemation-green-accent" placeholder="Password" required />
+                        </div>
+                        <div class="text-center">
+                            <button id="send" type="submit" class="bg-filemation-green-light hover:bg-filemation-green-hover border-none text-white py-2.5 px-10 transition-all duration-300 cursor-pointer rounded w-full">Log In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section><!-- #contact -->
+</main>
+
+<!--==========================
+  Footer
+============================-->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container mx-auto px-4">
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4">
+        <div class="copyright">
+            &copy; Copyright <strong>Filemation.com</strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+        </div>
+    </div>
+</footer><!-- #footer -->
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Template Main Javascript File -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
