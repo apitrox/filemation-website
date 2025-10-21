@@ -200,9 +200,22 @@
     @apply text-white;
   }
   
+  /* Intro section */
+  .intro-container {
+    margin: 30px;
+  }
+  
+  #intro .intro-container .background {
+    min-height: 425px;
+    background: url(../images/intro-img.png) center top no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+  }
+  
   /* Features section */
   #features {
-    padding: 80px 0 60px 0;
+    background: #fff;
+    padding: 0 0 25px 0;
   }
   
   #features .features-container {
@@ -213,14 +226,17 @@
   
   #features .content {
     padding: 0 15px;
+    background: #fff;
   }
   
   #features .icon-box {
-    @apply bg-white bg-cover pt-0 pb-3;
+    @apply bg-white bg-cover;
+    padding: 0 0 13px 0;
   }
   
   #features .icon-box .icon {
-    @apply float-left bg-white p-4 rounded-full;
+    @apply float-left bg-white rounded-full;
+    padding: 16px;
   }
   
   #features .icon-box .icon i {
@@ -228,7 +244,11 @@
   }
   
   #features .icon-box .title {
-    @apply ml-20 font-medium mb-1.5 text-lg pt-5;
+    margin-left: 80px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 18px;
+    padding-top: 20px;
   }
   
   #features .icon-box .title a {
