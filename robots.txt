@@ -1,0 +1,18 @@
+# robots.txt for https://filemation.com/
+
+User-agent: *
+Allow: /
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+Disallow: /*.css
+Disallow: /*.js
+Disallow: /README.md
+Disallow: /PROJECT-DOCUMENTATION.txt
+Disallow: /*.md
+Disallow: /*.txt
+Disallow: /tailwind.config.js
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://filemation.com/sitemap.xml
