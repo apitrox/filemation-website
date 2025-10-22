@@ -55,6 +55,7 @@
     @apply block;
   }
   
+  
   /* Hero section */
   #hero {
     @apply table w-full;
@@ -86,6 +87,7 @@
     }
   }
   
+
   /* Intro section */
   .intro-container {
     margin: 30px;
@@ -98,6 +100,7 @@
     margin-bottom: 10px;
   }
   
+
   /* Features section */
   #features {
     background: #fff;
@@ -150,6 +153,7 @@
     text-decoration: none;
   }
   
+
   /* Row and column utilities */
   .row {
     display: flex;
@@ -172,6 +176,7 @@
     }
   }
   
+
   /* Footer */
   #footer {
     background-color: #59ab37;
@@ -184,6 +189,7 @@
     @apply text-center;
   }
   
+
   /* Buttons */
   .btn {
     @apply min-w-[150px] text-center font-heading font-bold uppercase rounded-none p-0 transition-all duration-200 ease-in-out;
@@ -202,6 +208,7 @@
     @apply bg-white text-filemation-blue;
   }
   
+
   /* Contact form */
   .form .form-control {
     @apply w-full border border-gray-300 py-2 px-3 h-11 rounded-none transition-all duration-300;
